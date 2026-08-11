@@ -4,18 +4,21 @@
   "description": "Scalable multithreaded Node.js servers made easy.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "workspaces": [
+    "examples/*",
+    "test"
+  ],
   "scripts": {
-    "build": "tsc --build .",
-    "build:examples": "find examples -name package.json -not -path '*/node_modules/*' -execdir npm update \\;",
-    "build:test": "find test -name package.json -not -path '*/node_modules/*' -execdir npm update \\;",
     "clean": "rm -rf ./dist/*",
-    "clean:build": "npm run clean && npm run build",
+    "build": "tsc --build .",
     "watch": "tsc --watch",
-    "lint": "npm run build && npx eslint src",
-    "lint:all": "npm run build && npm run build:examples && npm run build:test && npx eslint .",
-    "format": "npx prettier --write .",
+    "clean:build": "npm run clean && npm run build",
+    "format": "prettier --write .",
     "format:lint": "npm run format && npm run lint",
-    "test": "npm update && npm run clean:build && npm update --prefix ./test && npm run clean:build:prep:start --prefix ./test"
+    "lint": "eslint src",
+    "lint:all": "eslint .",
+    "check": "npm run lint:all && npm test",
+    "test": "npm run clean:build && npm run clean:build:prep:start --workspace ./test"
   },
   "repository": {
     "type": "git",
