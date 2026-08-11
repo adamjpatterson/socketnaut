@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^4.22.0",
+    "fastify": "*",
     "socketnaut": "^1.6.0"
   },
   "type": "module"
