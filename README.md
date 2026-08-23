@@ -6,15 +6,15 @@ Scalable multithreaded Node.js servers made easy.
 
 <img align="right" width="425px" src="./transport.svg">
 
-Socketnaut makes scaling native Node.js servers easy. A Socketnaut [Service](https://github.com/far-analytics/socketnaut?#concepts) typically consists of a TCP proxy and a pool of HTTP servers. Socketnaut will uniformly distribute incoming TCP sockets across the pool of allocated servers. This strategy allows for both distribution and parallel processing of incoming requests. Socketnaut consumes native Node.js servers (e.g., `http.Server`, `https.Server`, `net.Server`, `tls.Server`); hence, if you know the [Node API](https://nodejs.org/docs/latest-v18.x/api/http.html), you already know how to build applications on Socketnaut!
+Socketnaut makes scaling native Node.js servers easy. A Socketnaut [Service](https://github.com/adamjpatterson/socketnaut?#concepts) typically consists of a TCP proxy and a pool of HTTP servers. Socketnaut will uniformly distribute incoming TCP sockets across the pool of allocated servers. This strategy allows for both distribution and parallel processing of incoming requests. Socketnaut consumes native Node.js servers (e.g., `http.Server`, `https.Server`, `net.Server`, `tls.Server`); hence, if you know the [Node API](https://nodejs.org/docs/latest-v18.x/api/http.html), you already know how to build applications on Socketnaut!
 
 Socketnaut can be used in order to scale the **main module** of web applications built on performant Node.js web frameworks (e.g., [Fastify](https://fastify.dev/), [Koa](https://koajs.com/), [Express](https://expressjs.com/)). Please see the [Examples](#examples) section for instructions on how to do this.
 
 ### Features
 
 - Socketnaut requires 0 out-of-org dependencies. Socketnaut's dependencies are published and maintained by the FAR Analytics & Research org:
-  - [_Streams_ Logger](https://github.com/far-analytics/streams-logger); a performant logger built from Node.js streams.
-  - [Port Peer](https://github.com/far-analytics/port-peer); an RPC-like facility for making inter-thread function calls.
+  - [_Streams_ Logger](https://github.com/adamjpatterson/streams-logger); a performant logger built from Node.js streams.
+  - [Port Peer](https://github.com/adamjpatterson/port-peer); an RPC-like facility for making inter-thread function calls.
 - The Socketnaut `ServiceProxy` and `ServiceAgent` constructors consume native Node [`net.Server`](https://nodejs.org/api/net.html#class-netserver), [`http.Server`](https://nodejs.org/api/http.html#class-httpserver), [`https.Server`](https://nodejs.org/api/https.html#class-httpsserver), and [`tls.Server`](https://nodejs.org/api/tls.html#class-tlsserver) instances; _you can configure them however you choose_.
 - Import Socketnaut as a Node.js module (see the [Hello, World!](#an-instance-of-hello-world-nodejs) example) or take advantage of the packaged type definitions and import it into your TypeScript project.
 
@@ -54,7 +54,7 @@ A `ServiceAgent` coordinates the state of its server (e.g., the server's address
 
 This simple "Hello, World!" app is a complete Socketnaut Service. **You're looking at an ordinary Node.js web app**, except that a `ServiceProxy` instance is created in the `index.js` module and a `ServiceAgent` instance is created in the scaled `http_server.js` module - _that is all it takes to scale this web app_. Scaling sophisticated web applications is just as easy.
 
-Please see the [Hello, World! example](https://github.com/far-analytics/socketnaut/tree/main/examples/hello_world) for a working implementation.
+Please see the [Hello, World! example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/hello_world) for a working implementation.
 
 ### Implement the index.js module
 
@@ -105,27 +105,27 @@ const agent = createServiceAgent({ server });
 
 ### _An instance of Hello, World!_ <sup><sup>\</Node.js\></sup></sup>
 
-Please see the [Hello, World! example](https://github.com/far-analytics/socketnaut/tree/main/examples/hello_world) for a working implementation.
+Please see the [Hello, World! example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/hello_world) for a working implementation.
 
 ### _Use Socketnaut to scale a Fastify web application_ <sup><sup>\</TypeScript\></sup></sup>
 
-Please see the [Fastify example](https://github.com/far-analytics/socketnaut/tree/main/examples/socketnaut_fastify) for a working implementation.
+Please see the [Fastify example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/socketnaut_fastify) for a working implementation.
 
 ### _Use Socketnaut to scale a Koa web application_ <sup><sup>\</TypeScript\></sup></sup>
 
-Please see the [Koa example](https://github.com/far-analytics/socketnaut/tree/main/examples/socketnaut_koa) for a working implementation.
+Please see the [Koa example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/socketnaut_koa) for a working implementation.
 
 ### _Use Socketnaut to scale an Express web application_ <sup><sup>\</TypeScript\></sup></sup>
 
-Please see the [Express example](https://github.com/far-analytics/socketnaut/tree/main/examples/socketnaut_express) for a working implementation.
+Please see the [Express example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/socketnaut_express) for a working implementation.
 
 ### _Redirect HTTP connections to an HTTPS server_ <sup><sup>\</TypeScript\></sup></sup>
 
-Please see the [Redirect HTTP to HTTPS example](https://github.com/far-analytics/socketnaut/tree/main/examples/redirect_http_to_https) for a working implementation.
+Please see the [Redirect HTTP to HTTPS example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/redirect_http_to_https) for a working implementation.
 
 ### _A TLS proxy and an HTTP redirect_ <sup><sup>\</TypeScript\></sup></sup>
 
-In the previous example, the TLS endpoint was in the worker thread; however, it doesn't need to be. Alternatively, TLS can be handled by the proxy server. Please see the [A TLS Proxy and an HTTP Redirect example](https://github.com/far-analytics/socketnaut/tree/main/examples/tls_proxy_and_http_redirect) for a working implementation.
+In the previous example, the TLS endpoint was in the worker thread; however, it doesn't need to be. Alternatively, TLS can be handled by the proxy server. Please see the [A TLS Proxy and an HTTP Redirect example](https://github.com/adamjpatterson/socketnaut/tree/main/examples/tls_proxy_and_http_redirect) for a working implementation.
 
 ## API
 
@@ -236,7 +236,7 @@ The information returned by the `ServiceAgent.requestProxySocketAddressInfo` met
 
 ## Logging
 
-By default Socketnaut logs to the console using the performant [_Streams_ Logger](https://github.com/far-analytics/streams-logger).
+By default Socketnaut logs to the console using the performant [_Streams_ Logger](https://github.com/adamjpatterson/streams-logger).
 
 ### Changing the log level
 
@@ -270,7 +270,7 @@ Socketnaut's `Logger` may be configured however you choose. You can `connect` or
 import { logger, formatter, consoleHandler } from "socketnaut";
 ```
 
-Once you have imported Socketnaut's logging Nodes, you can manipulate the logging graph as you choose using the [_Streams_ Logger API](https://github.com/far-analytics/streams-logger#api). You could, for example, configure the Service Proxy to log to a file instead of the console.
+Once you have imported Socketnaut's logging Nodes, you can manipulate the logging graph as you choose using the [_Streams_ Logger API](https://github.com/adamjpatterson/streams-logger#api). You could, for example, configure the Service Proxy to log to a file instead of the console.
 
 In this example a `RotatingFileHandler` is instantiated that will log messages to a file named `socketnaut.log`. Socketnaut's `Formatter` is disconnected from the `ConsoleHandler` and connected to the `RotatingFileHandler`.
 
@@ -286,7 +286,7 @@ const rotatingFileHandler = new RotatingFileHandler({
 formatter.disconnect(consoleHandler).connect(rotatingFileHandler);
 ```
 
-You can use Socketnaut's `logger` instance for your logging purposes or use a logger of your choice. Please see the detailed [_Streams_ Logger](https://github.com/far-analytics/streams-logger) documentation for further instructions on how to configure a _Streams_ logging graph.
+You can use Socketnaut's `logger` instance for your logging purposes or use a logger of your choice. Please see the detailed [_Streams_ Logger](https://github.com/adamjpatterson/streams-logger) documentation for further instructions on how to configure a _Streams_ logging graph.
 
 ## Versioning
 
@@ -316,7 +316,7 @@ Excerpted from [Semantic Versioning 2.0.0](https://semver.org/):
 #### Clone the repository.
 
 ```bash
-git clone https://github.com/far-analytics/socketnaut.git
+git clone https://github.com/adamjpatterson/socketnaut.git
 ```
 
 #### Change directory into the root of the repository.
@@ -345,6 +345,6 @@ npm test level=INFO
 
 ## Support
 
-If you have a feature request or run into any issues, feel free to submit an [issue](https://github.com/far-analytics/socketnaut/issues) or start a [discussion](https://github.com/far-analytics/socketnaut/discussions). You’re also welcome to reach out directly to one of the authors.
+If you have a feature request or run into any issues, feel free to submit an [issue](https://github.com/adamjpatterson/socketnaut/issues) or start a [discussion](https://github.com/adamjpatterson/socketnaut/discussions). You’re also welcome to reach out directly to one of the authors.
 
-- [Adam Patterson](https://github.com/adpatter)
+- [Adam Patterson](https://github.com/adamjpatterson)

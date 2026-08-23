@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/far-analytics/socketnaut.git"
+    "url": "git+https://github.com/adamjpatterson/socketnaut.git"
   },
   "author": "FAR",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/far-analytics/socketnaut/issues"
+    "url": "https://github.com/adamjpatterson/socketnaut/issues"
   },
-  "homepage": "https://github.com/far-analytics/socketnaut#readme",
+  "homepage": "https://github.com/adamjpatterson/socketnaut#readme",
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "@stylistic/eslint-plugin": "^5.4.0",
