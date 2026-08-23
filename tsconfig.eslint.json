@@ -12,13 +12,6 @@
     },
     "strict": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.mjs",
-    "**/*.cjs"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
   "exclude": ["**/dist/**", "**/node_modules/**"]
 }

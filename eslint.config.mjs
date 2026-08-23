@@ -30,4 +30,8 @@ export default defineConfig([
       "@typescript-eslint/no-empty-function": ["off"],
     },
   },
+  {
+    files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
+    extends: [tseslint.configs.disableTypeChecked],
+  },
 ]);
