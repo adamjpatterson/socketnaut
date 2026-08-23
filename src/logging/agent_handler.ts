@@ -10,11 +10,7 @@ export class AgentHandler extends Node<LogContext, never> {
         ...streamOptions,
         ...{
           objectMode: true,
-          write: (
-            chunk: LogContext,
-            encoding: BufferEncoding,
-            callback: stream.TransformCallback
-          ) => {
+          write: (chunk: LogContext, encoding: BufferEncoding, callback: stream.TransformCallback) => {
             (async () => {
               await peer.call(callable, {
                 message: chunk.message,
@@ -22,7 +18,7 @@ export class AgentHandler extends Node<LogContext, never> {
                 isotime: chunk.isotime,
                 pid: chunk.pid,
                 hostname: chunk.hostname,
-                threadid: chunk.threadid
+                threadid: chunk.threadid,
               });
               callback();
             })().catch((reason: unknown) => {
