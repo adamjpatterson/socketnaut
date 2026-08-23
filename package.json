@@ -29,6 +29,7 @@
     "lint": "eslint src",
     "lint:all": "eslint .",
     "check": "npm run lint:all && npm test",
+    "prepack": "npm run clean:build",
     "test": "npm run clean:build && npm run clean:build:prep:start --workspace ./test"
   },
   "repository": {
