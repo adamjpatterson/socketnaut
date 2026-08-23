@@ -1,19 +1,30 @@
 {
   "name": "hello_world_tsx",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example - Hello, World! with TypeScript",
   "main": "./index.js",
   "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:lint": "npm run format && npm run lint",
     "start": "npx tsx index.ts"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "socketnaut": "^1.6.0"
+    "socketnaut": "^1.6.22"
   },
   "type": "module",
   "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^22.10.2",
-    "tsx": "^4.19.2"
-  }
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.67.0"
+  },
+  "private": true
 }

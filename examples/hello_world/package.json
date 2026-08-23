@@ -1,15 +1,27 @@
 {
   "name": "hello_world",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example - Hello, World!",
   "main": "./index.js",
   "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:lint": "npm run format && npm run lint",
     "start": "node ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "socketnaut": "^1.6.0"
+    "socketnaut": "^1.6.22"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.67.0"
+  },
+  "private": true
 }

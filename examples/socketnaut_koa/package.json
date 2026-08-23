@@ -1,19 +1,29 @@
 {
   "name": "socketnaut_koa",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example - Socketnaut with Koa",
   "main": "./index.js",
   "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:lint": "npm run format && npm run lint",
     "start": "node ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.14.2",
-    "socketnaut": "^1.6.0"
+    "koa": "^2.16.4",
+    "socketnaut": "^1.6.22"
   },
   "type": "module",
   "devDependencies": {
-    "@types/koa": "*"
-  }
+    "@eslint/js": "^9.37.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/koa": "^3.0.3",
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.67.0"
+  },
+  "private": true
 }
