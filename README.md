@@ -328,7 +328,7 @@ cd socketnaut
 #### Install dependencies.
 
 ```bash
-npm install && npm update
+npm install
 ```
 
 #### Run the test.
