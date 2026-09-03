@@ -16,7 +16,6 @@
     "LICENSE"
   ],
   "workspaces": [
-    "examples/*",
     "test"
   ],
   "scripts": {
