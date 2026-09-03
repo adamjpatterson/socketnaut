@@ -51,11 +51,11 @@
     "nodemon": "^3.1.14",
     "prettier": "^3.9.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.67.0"
+    "typescript-eslint": "^8.69.0"
   },
   "dependencies": {
-    "@far-analytics/port-peer": "^1.0.2",
-    "streams-logger": "^3.1.4"
+    "@far-analytics/port-peer": "^2.0.0",
+    "streams-logger": "^3.1.5"
   },
   "engines": {
     "npm": ">=10.1.0",
