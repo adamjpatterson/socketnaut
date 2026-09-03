@@ -74,7 +74,7 @@ cd socketnaut/examples/hello_world
 #### Install the example dependencies.
 
 ```bash
-npm install && npm update
+npm install
 ```
 
 #### Run the application.

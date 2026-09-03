@@ -23,10 +23,10 @@
     "globals": "^16.5.0",
     "prettier": "^3.9.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.67.0"
+    "typescript-eslint": "^8.69.0"
   },
   "dependencies": {
-    "socketnaut": "^1.6.22"
+    "socketnaut": "^1.6.24"
   },
   "engines": {
     "node": ">=18.1.0"

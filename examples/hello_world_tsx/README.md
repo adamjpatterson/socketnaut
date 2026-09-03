@@ -73,7 +73,7 @@ cd socketnaut/examples/hello_world_tsx
 #### Install the example dependencies.
 
 ```bash
-npm install && npm update
+npm install
 ```
 
 #### Run the application.

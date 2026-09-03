@@ -73,7 +73,7 @@ cd socketnaut/examples/socketnaut_koa
 #### Install the example dependencies.
 
 ```bash
-npm install && npm update
+npm install
 ```
 
 #### Run the application. The `start` script will run the `index.js` module.

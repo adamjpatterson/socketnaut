@@ -84,7 +84,7 @@ cd socketnaut/examples/tls_proxy_and_http_redirect
 #### Install the example dependencies.
 
 ```bash
-npm install && npm update
+npm install
 ```
 
 #### Build the TypeScript application.

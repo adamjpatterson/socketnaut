@@ -116,7 +116,7 @@ cd socketnaut/examples/redirect_http_to_https
 #### Install the example dependencies.
 
 ```bash
-npm install && npm update
+npm install
 ```
 
 #### Build the TypeScript application.
